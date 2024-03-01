@@ -1,14 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
     tools:context=".presenter.auth.register.RegisterFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/materialLayoutToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Criar conta"
+                    android:textSize="16sp" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/materialLayoutToolbar"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:textColor="@color/color_default"/>
+            <EditText
+                android:id="@+id/txt_newuser_nome"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:hint="Digite seu nome"
+                android:textSize="16sp"
+                android:background="@drawable/bg_edit_rounded"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/color_default"
+                android:drawableStart="@drawable/ic_person"
+                android:drawableTint="@color/color_default"
+                android:drawablePadding="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:textColor="@color/color_default"/>
+            <EditText
+                android:id="@+id/txt_recover_email"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:hint="Digite seu e-mail"
+                android:textSize="16sp"
+                android:background="@drawable/bg_edit_rounded"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/color_default"
+                android:drawableStart="@drawable/ico_email"
+                android:drawableTint="@color/color_default"
+                android:drawablePadding="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefone"
+                android:textColor="@color/color_default"/>
+            <EditText
+                android:id="@+id/txt_newuser_Telefone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:hint="Digite seu Telefone"
+                android:textSize="16sp"
+                android:background="@drawable/bg_edit_rounded"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/color_default"
+                android:drawableStart="@drawable/ic_phone_android"
+                android:drawableTint="@color/color_default"
+                android:drawablePadding="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Senha"
+                android:textColor="@color/color_default"/>
+            <EditText
+                android:id="@+id/txt_newuser_senha"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:hint="Digite sua senha"
+                android:textSize="16sp"
+                android:background="@drawable/bg_edit_rounded"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/color_default"
+                android:drawableStart="@drawable/ico_lock"
+                android:drawableTint="@color/color_default"
+                android:drawablePadding="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmar senha"
+                android:textColor="@color/color_default"/>
+            <EditText
+                android:id="@+id/txt_newuser_confirmarSenha"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:hint="Confirme sua senha"
+                android:textSize="16sp"
+                android:background="@drawable/bg_edit_rounded"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:textColorHint="@color/color_default"
+                android:drawableStart="@drawable/ico_lock"
+                android:drawableTint="@color/color_default"
+                android:drawablePadding="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cadastrarUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="12dp"
+                android:layout_marginVertical="16dp"
+                app:backgroundTint="@color/color_default"
+                android:text="CADASTRAR NOVA CONTA"
+                android:textSize="16sp"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="12dp"
+                android:indeterminateTint="@color/color_default"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
