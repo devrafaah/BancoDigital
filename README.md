@@ -30,6 +30,7 @@
   <li><strong>Picasso</strong>: Carregamento e cache de imagens de forma eficiente.</li>
   <li><strong>TedPermission</strong>: Gerenciamento simplificado de permissões no Android.</li>
   <li><strong>SimpleSearchView</strong>: Barra de busca customizada para pesquisa rápida dentro do aplicativo.</li>
+  <li><strong>SafeArgs</strong>: Muito utilizado e recomendado para navegação entre telas e passagem de dados.</li>
 </ul>
 <h2>Configurações e Permissões</h2>
 <p>O aplicativo requer as seguintes permissões e configurações para funcionar corretamente:</p>
