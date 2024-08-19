@@ -41,11 +41,12 @@
 <h2>Documentação Técnica</h2>
 <p>A seguir está um resumo das principais dependências e frameworks utilizados no projeto:</p>
 <pre>
-    // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
-    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.firebase:firebase-database")
-    implementation("com.google.firebase:firebase-storage")
+  
+// Firebase
+implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
+implementation("com.google.firebase:firebase-auth")
+implementation("com.google.firebase:firebase-database")
+implementation("com.google.firebase:firebase-storage")
 
 // Lifecycle
 val lifecycle_version = "2.8.3"
