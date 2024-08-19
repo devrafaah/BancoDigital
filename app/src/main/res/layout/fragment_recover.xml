@@ -8,13 +8,13 @@
     android:background="@color/white"
     tools:context=".presenter.auth.recover.RecoverFragment">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@color/white">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/materialToolbar"
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,8 +30,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="16sp"
-                    android:text="Recuperar a Conta"/>
+                    android:text="@string/text_title_recover_account_recover_fragment"/>
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -41,54 +40,62 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="30dp"
-            android:text="Digite seu e-mail que te enviaremos um link para você alterar sua senha"
+            android:layout_margin="24dp"
+            android:text="@string/text_warning_recover_fragment"
             android:textAlignment="center"
-            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="25dp"
-            android:text="E-mail"
-            android:textColor="@color/color_default"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
         <EditText
-            android:id="@+id/txt_recover_email"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginHorizontal="24dp"
-            android:background="@drawable/bg_edit_rounded"
-            android:drawableStart="@drawable/ico_email"
-            android:drawablePadding="8dp"
+            android:id="@+id/recover_user_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:hint="@string/text_hint_email_recover_fragment"
+            style="@style/Theme.EditText"
+            android:drawableStart="@drawable/ic_email"
             android:drawableTint="@color/color_default"
-            android:hint="Digite seu e-mail"
-            android:padding="10dp"
-            android:textColorHint="@color/color_default"
-            android:textSize="16sp"
+            android:drawablePadding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress" />
+
+
+
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_recover"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:text="ENTRAR"
-            app:backgroundTint="@color/color_default"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_btn"
+            android:backgroundTint="@null"
+            android:letterSpacing=".05"
+            android:text="@string/text_button_recover_fragment"
+            android:textAllCaps="true"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_recover_email" />
+            app:layout_constraintTop_toBottomOf="@+id/recover_user_email" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:visibility="visible"
+            android:visibility="invisible"
+            android:layout_marginTop="50dp"
+            android:indeterminateTint="@color/color_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_recover" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </ScrollView>

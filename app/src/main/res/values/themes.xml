@@ -1,10 +1,55 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
-    <style name="Base.Theme.BancoDigital" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <style name="Theme.BancoDigital" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowBackground">@color/color_default</item>
+
+
+        <item name="colorPrimaryVariant">@color/color_default</item>
+        <item name="android:statusBarColor">@color/color_default</item>
+        <item name="colorSecondary">@color/color_default</item>
+    </style>
+    <style name="Theme.EditText" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:background">@drawable/bg_edit_normal</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:textColorHint">@color/color_text_hint</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_default</item>
     </style>
 
-    <style name="Theme.BancoDigital" parent="Base.Theme.BancoDigital" />
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="Theme.Dark" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="SimpleSearchViewStyle">
+        <!-- Change search style -->
+        <item name="colorSecondary">@color/white</item>
+        <!-- Search bar/card background -->
+        <item name="searchBackground">@drawable/bg_search</item>
+        <!-- Change search hint -->
+        <item name="android:hint">@string/search_hint</item>
+        <!-- Change search inputType -->
+        <item name="android:inputType">text</item>
+        <!-- Change search textColor -->
+        <item name="hintColor">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <!-- Change icons alpha -->
+        <item name="backIconAlpha">0.8</item>
+        <item name="backIconTint">@color/white</item>
+        <item name="iconsAlpha">0.8</item>
+        <!-- Enable voice search -->
+        <item name="voiceSearch">true</item>
+        <item name="iconsTint">@color/white</item>
+    </style>
+
+    <style name="ThemeScreenConfirm" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/color_sucess</item>
+    </style>
+
 </resources>

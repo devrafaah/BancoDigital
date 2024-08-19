@@ -1,5 +1,160 @@
 <resources>
     <string name="app_name">Banco Digital</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Generic -->
+    <string name="text_name_empty">Digite seu nome</string>
+    <string name="text_email_empty">Digite seu email</string>
+    <string name="text_telefone_empty">Digite seu telefone</string>
+    <string name="text_senha_empty">Digite sua senha</string>
+    <string name="error_generic">Ocorreu um erro, por favor tente novamente mais tarde</string>
+    <string name="text_phone_invalid">Numero de telefone Inválido</string>
+    <string name="divider_setContentDescription">divider</string>
+    <string name="text_formated_value">R$ %1$s</string>
+
+    <!-- Erros Firebase Authentication -->
+    <string name="firebaseError_password_or_email_wrong_register_fragment">Email ou senha inválidos, verifique novamente.</string>
+    <string name="firebaseError_invalid_email_register_fragment">Insira um e-mail válido.</string>
+    <string name="firebaseError_email_in_use_register_fragment">Este e-mail já está em uso.</string>
+    <string name="firebaseError_strong_password_register_fragment">Insira uma senha mais forte.</string>
+
+
+    <!--SplashFragment -->
+    <string name="ImageLogo">LogoSimbol</string>
+
+    <!-- LoginFragment -->
+    <string name="text_hint_email_login_fragment">Email</string>
+    <string name="text_hint_password_login_fragment">Password</string>
+    <string name="text_button_login_fragment">Entrar</string>
+    <string name="text_create_newAccount_login_fragment">Criar uma nova conta</string>
+    <string name="text_recover_Account_login_fragment">Recuperar Conta</string>
+
+    <!-- RegisterFragment -->
+    <string name="text_title_register_fragment">Criar Conta</string>
+    <string name="text_name_register_fragment">Nome</string>
+    <string name="text_hint_name_register_fragment">Digite seu Nome</string>
+    <string name="text_email_register_fragment">E-mail</string>
+    <string name="text_hint_email_register_fragment">Digite seu E-mail</string>
+    <string name="text_phone_register_fragment">Telefone</string>
+    <string name="text_hint_phone_register_fragment">Digite o seu Telefone</string>
+    <string name="text_password_register_fragment">Senha</string>
+    <string name="text_hint_password_register_fragment">Digite sua senha</string>
+    <string name="text_button_register_fragment">CADASTRAR</string>
+
+    <!-- RecoverFragment-->
+    <string name="text_message_send_email_sucess">Email enviado com sucesso!!</string>
+    <string name="text_title_recover_account_recover_fragment">Recuperar Conta</string>
+    <string name="text_warning_recover_fragment">Digite seu e-mail que te enviaremos um link para você alterar sua senha</string>
+    <string name="text_hint_email_recover_fragment">Email</string>
+    <string name="text_button_recover_fragment">Enviar Email</string>
+
+
+    <!-- HomeFragment -->
+    <string name="text_HomeFragment_toolbar">Recibo</string>
+    <string name="text_HomeFragment_myBalance">Meu saldo</string>
+    <string name="text_HomeFragment_setImagelogout">Icone Loggout</string>
+    <string name="text_HomeFragment_setImageDepositar">Depositar</string>
+    <string name="text_HomeFragment_setImageCellRecharge">Recarga de Celular</string>
+    <string name="text_HomeFragment_setImageExtract">Extrato</string>
+    <string name="text_HomeFragment_setImageTransfer">Transferir</string>
+    <string name="text_HomeFragment_setImageProfile">Perfil</string>
+    <string name="text_HomeFragment_lastTransactions">Ultimas 6 transações</string>
+    <string name="text_HomeFragment_seeAllTransactions">Ver todas</string>
+    <string name="text_HomeFragment_empty_users">Nenhuma transação efetuado</string>
+
+
+    <!-- DepositFormFragment -->
+    <string name="text_depositForm_toolbar">Depositar</string>
+    <string name="text_depositForm_information_input_value">R$ 0,00</string>
+    <string name="text_depositForm_information_value">Informe o valor a ser depositado</string>
+    <string name="text_depositForm_information2_value">Valor do Deposito</string>
+    <string name="text_depositForm_information_edit_value">Valor do Deposito</string>
+    <string name="text_depositForm_information_btn_confirme">CONFIRMAR</string>
+
+    <!--DepositReceiptFragment-->
+    <string name="text_DepositReceipt_toolbar">Recibo</string>
+    <string name="text_DepositReceipt_title">Depósito efetuado com sucesso!</string>
+    <string name="text_DepositReceipt_information">Seu deposito ficará disponivel em até 3 dias úteis</string>
+    <string name="text_DepositReceipt_code_text">Código Transação</string>
+    <string name="text_DepositReceipt_date">Data de deposito</string>
+    <string name="text_DepositReceipt_deposit_value">Valor de deposito</string>
+    <string name="text_DepositReceipt_btn">CONTINUAR</string>
+
+    <!-- ExtractFragment-->
+    <string name="text_ExtractFragment_toolbar">Extrato</string>
+    <string name="text_ExtractFragment_emptyList">Nenhuma transação efetuada</string>
+
+    <!-- RechargeFormFragment -->
+    <string name="text_rechargeForm_toolbar">Recarga</string>
+    <string name="text_rechargeForm_information_phone">Informe o telefone para fazer uma recarga</string>
+    <string name="text_rechargeForm_information_edit_phone">Informe o telefone para fazer uma recarga</string>
+    <string name="text_rechargeForm_information_value">Informe o valor para efetuar a recarga</string>
+    <string name="text_rechargeForm_information_edit_value">valor da recarga</string>
+    <string name="text_rechargeForm_btn_confirme">CONFIRMAR</string>
+
+    <!--RechargeReceiptFragment-->
+    <string name="text_recharge_toolbar">Recibo</string>
+    <string name="text_recharge_information_title">Recarga efetuada com sucesso!</string>
+    <string name="text_recharge_information">Seu crédito estará disponível em alguns minutos.</string>
+    <string name="text_recharge_information_code">Código Transação.</string>
+    <string name="text_recharge_information_date">Data Recarga</string>
+    <string name="text_recharge_information_value">Valor Recarga</string>
+    <string name="text_recharge_information_number">Número</string>
+    <string name="text_recharge_information_btn">Voltar</string>
+
+    <!-- ProfileFragment -->
+    <string name="text_profileFragment_toolbar">Profile</string>
+    <string name="text_message_camera_denied_profile_fragment">Para que você capture imagens utilizando a câmera precisaremos da permissão. Acesse as configurações de permissões e habilite a permissão</string>
+    <string name="text_message_galery_denied_profile_fragment">Para que você carregue imagens utilizando a galeria precisaremos da permissão. Acesse as configurações de permissões e habilite a permissão</string>
+    <string name="text_profileFragment_btn">SALVAR</string>
+
+    <!-- TransferFormFragment -->
+    <string name="text_transferFormFragment_title">Transferência</string>
+    <string name="text_transferFormFragment_description">Informe um valor para transferir</string>
+    <string name="text_transferFormFragment_DefaultValue">R$ 0,00</string>
+    <string name="text_transferFormFragment_information_edit_value">Valor de transferência</string>
+    <string name="text_transferFormFragment_warning_empty_value">Insira um valor para fazer uma transferência</string>
+    <string name="text_transferFormFragment_btn">CONFIRMAR</string>
+
+    <!-- TransferUserListFragment -->
+    <string name="text_transferuserlist_toolbar">Usuários</string>
+
+    <!-- TransferConfirmFragment -->
+    <string name="text_TransferConfirmFragment_toolbar">Transferência</string>
+    <string name="text_TransferConfirmFragment_title">Confirme os dados antes de realizar a transferência.</string>
+    <string name="text_TransferConfirmFragment_subtitle">Apos confirmar a transferência não será possível desfazê-la</string>
+    <string name="text_TransferConfirmFragment_user_description">Usuario que irá receber a transferência</string>
+    <string name="text_TransferConfirmFragment_value">Valor Transferência</string>
+    <string name="text_TransferConfirmFragment_nome">Nome</string>
+    <string name="btn_TransferConfirmFragment_send">ENVIAR</string>
+    <string name="text_TransferConfirmFragment_setinformation">TransferUser</string>
+    <string name="text_TransferConfirmFragment_insufficientBalance">Você não possui o valor suficiente para fazer a transferência</string>
+
+    <!-- TransferReceiptFragment -->
+    <string name="text_TransferReceiptFragment_title_toolbar">Recibo</string>
+    <string name="text_TransferReceiptFragment_subtitle_send">Débito realizado com sucesso. A previsão do crédito na conta de destino é de até 30 minutos</string>
+    <string name="text_TransferReceiptFragment_subtitle_received">Débito foi realizado com sucesso em sua conta. A previsão do crédito é de no máximo 30 minutos</string>
+    <string name="text_TransferReceiptFragment_title_send">Transferência efetuada com sucesso!</string>
+    <string name="text_TransferReceiptFragment_title_received">Transferência recebida com sucesso!</string>
+    <string name="text_TransferReceiptFragment_code">Código Transação</string>
+    <string name="text_TransferReceiptFragment_setImage">Imagem de Transferência</string>
+    <string name="text_TransferReceiptFragment_nome">Nome</string>
+    <string name="text_TransferReceiptFragment_data">Data de Transferência</string>
+    <string name="text_TransferReceiptFragment_valor">Valor Transferência</string>
+    <string name="btn_TransferReceiptFragment_button_name">OK</string>
+    <string name="empty_users">Nenhum Usuario Encontrado</string>
+
+
+
+
+    <!-- item BottomSheet-->
+    <string name="text_title_bottom_sheet">Atenção</string>
+    <string name="text_button_bottom_sheet">Entendi</string>
+
+    <!-- item Layout BottomSheet Image -->
+    <string name="text_bottomSheet_image_title">Adicionar imagem de perfil</string>
+    <string name="text_bottomSheet_image_message">Escolha uma maneira de escolher sua foto de perfil por meio da câmera ou acessando sua galeria.</string>
+    <string name="text_bottomSheet_image_btn_cam">CÂMERA</string>
+    <string name="text_bottomSheet_image_btn_galery">GALERIA</string>
+
+
 </resources>
