@@ -46,8 +46,7 @@
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-database")
     implementation("com.google.firebase:firebase-storage")
-scss
-Copiar código
+
 // Lifecycle
 val lifecycle_version = "2.8.3"
 implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
