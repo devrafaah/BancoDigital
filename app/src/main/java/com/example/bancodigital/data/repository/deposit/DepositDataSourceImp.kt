@@ -1,6 +1,7 @@
 package com.example.bancodigital.data.repository.deposit
 
 import com.example.bancodigital.data.model.Deposit
+import com.example.bancodigital.data.model.Deposit.Companion.getIdFromFirebase
 import com.example.bancodigital.util.FirebaseHelper
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -22,12 +23,12 @@ class DepositDataSourceImp @Inject constructor(
     override suspend fun saveDeposit(deposit: Deposit): Deposit {
         return suspendCoroutine { continuation ->
             depositReference
-                .child(deposit.id)
+                .child(getIdFromFirebase())
                 .setValue(deposit)
                 .addOnCompleteListener {  task ->
                     if(task.isSuccessful) {
                         var dateReference = depositReference
-                            .child(deposit.id)
+                            .child(getIdFromFirebase())
                             .child("date")
                             dateReference.setValue(ServerValue.TIMESTAMP)
                                 .addOnCompleteListener {  taskUpdate ->

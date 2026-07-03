@@ -73,7 +73,6 @@ class ProfileDataSourceImp @Inject constructor(
                             }
                         }
                         continuation.resumeWith(Result.success(userList))
-
                     }
 
                     override fun onCancelled(error: DatabaseError) {

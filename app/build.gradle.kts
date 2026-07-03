@@ -55,7 +55,12 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+
     testImplementation("junit:junit:4.13.2")
+    // Biblioteca principal do MockK para testes unitários locais
+    testImplementation("io.mockk:mockk:1.13.11") // (Você pode usar a versão mais recente que o Android Studio sugerir)
+    // Opcional: Se você for fazer testes de coroutines (runTest)
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.0")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
 
@@ -103,6 +108,10 @@ dependencies {
     // searchView
     //https://github.com/Ferfalk/SimpleSearchView
     implementation("com.github.Ferfalk:SimpleSearchView:0.2.1")
+
+
+
+    // mocks
 }
 kapt {
     correctErrorTypes = true

@@ -14,6 +14,7 @@ import com.example.bancodigital.MainGraphDirections
 import com.example.bancodigital.data.enum.TransactionOperation
 import com.example.bancodigital.data.enum.TransactionType
 import com.example.bancodigital.data.model.Deposit
+import com.example.bancodigital.data.model.Deposit.Companion.getIdFromFirebase
 import com.example.bancodigital.data.model.Transaction
 import com.example.bancodigital.databinding.FragmentDepositFormBinding
 import com.example.bancodigital.util.BaseFragment
@@ -104,7 +105,7 @@ class DepositFormFragment : BaseFragment() {
     private fun saveTransaction(deposit : Deposit) {
 
         val transaction = Transaction(
-            id = deposit.id,
+            id = getIdFromFirebase(),
             operation = TransactionOperation.DEPOSIT,
             date = deposit.date,
             amount = deposit.amount,
@@ -121,7 +122,7 @@ class DepositFormFragment : BaseFragment() {
                 }
                 is StateView.Sucess -> {
                     val action = MainGraphDirections
-                        .actionGlobalDepositReceiptFragment(deposit.id, false)
+                        .actionGlobalDepositReceiptFragment(getIdFromFirebase(), false)
                     findNavController().navigate(action)
                     Toast.makeText(requireContext(), "Salvado com sucesso", Toast.LENGTH_SHORT).show()
                     binding.progressBar.isVisible = false

@@ -10,7 +10,10 @@ data class Deposit (
     var date: Long = 0,
     var amount: Float = 0f,
 ) : Parcelable {
-    init {
-        this.id = FirebaseDatabase.getInstance().reference.push().key ?: ""
+    companion object {
+        fun getIdFromFirebase() : String {
+            val id = FirebaseDatabase.getInstance().reference.push().key ?: ""
+            return id
+        }
     }
 }

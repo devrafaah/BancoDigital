@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.bancodigital.R
 import com.example.bancodigital.data.model.Deposit
+import com.example.bancodigital.data.model.Deposit.Companion.getIdFromFirebase
 import com.example.bancodigital.databinding.FragmentDepositReceiptBinding
 import com.example.bancodigital.util.GetMask
 import com.example.bancodigital.util.StateView
@@ -73,7 +74,7 @@ class DepositReceiptFragment : Fragment() {
         getDeposit()
     }
     private fun configData(deposit : Deposit) {
-        binding.textDepositcode.text = deposit.id
+        binding.textDepositcode.text = getIdFromFirebase()
         binding.textDateDeposit.text = GetMask.getFormatedDate(deposit.date,GetMask.DAY_MONTH_YEAR_HOUR_MINUTE)
         binding.textAmountDeposit.text = getString(R.string.text_formated_value, GetMask.getFormatedValue(deposit.amount))
     }
